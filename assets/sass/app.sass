@@ -1,0 +1,30 @@
+@import 'fonts'
+@import 'mixins'
+@import 'variables'
+
+
+*, *::after, *::before
+  box-sizing: border-box
+
+html
+  @include font(base-regular)
+  font-size: $base-fsize
+
+body
+  position: relative
+  min-width: 320px
+  color: $grey
+  font-size: $base-fsize
+  line-height: 1.6
+  overflow-x: hidden
+
+ul
+  margin: 0
+  padding: 0
+
+.content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+  height: 100vh
