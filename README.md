@@ -1,6 +1,6 @@
-### - Firebase administration tools
+### - Nuxt Firebase build
 
-> Administration tools for Firebase project with Nuxt.js
+> Firebase project with Nuxt.js
 
 ### - Requirements
 
@@ -8,9 +8,7 @@ You need [nodejs](https://nodejs.org/en/) with npm
 
 ### - First of all
 
-- setting *server/config.js* 
-  - set session keys (generate random [here](https://randomkeygen.com/))
-  - set firebase API key and projectId
+- set projectId in *server/config.js*
 
 
 - get service accounts key
@@ -19,22 +17,7 @@ You need [nodejs](https://nodejs.org/en/) with npm
   - generate key, rename and place to root of project
 
 
-- setting database
-	- enable cloud firestore with strict access
-	- create user in firebase project (Authentication page) and copy uid
-	- add collection "*administration-users*" with document "[your user uid]"
-	- in user document set default structure:
-		- email (*String*) = your user email
-		- uuid (*String*) = your user uid
-		- appearance (*Object*)
-			- navigation (*Boolean*) = true/false
-			- theme (*String*) = Light/Dark
-			- color (*String*) = blue-grey
-	- add collection "*administration-settings*" with document "*defaults*"
-	- in defaults document set default appearance:
-		- appearance (*Object*)
-			- theme (*String*) = Dark/Light
-			- color (*String*) = blue-grey
+- enable cloud firestore with locked access
 
 ### - Build Setup
 
@@ -42,7 +25,7 @@ You need [nodejs](https://nodejs.org/en/) with npm
 # install dependencies
 $ npm install
 
-# craft svg icons
+# craft svg icons (run once before npm run dev)
 $ npm run icons
 
 # serve with hot reload at localhost:8080
