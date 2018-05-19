@@ -2,7 +2,7 @@
 
 import { db } from '~/server/firebase'
 
-export default async (context) => {
+export default async () => {
   const collection = db.collection('posts')
   const result = await collection.get().then(snap => {
     const data = {}

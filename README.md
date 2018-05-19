@@ -4,7 +4,7 @@
 
 ### - Requirements
 
-You need [nodejs](https://nodejs.org/en/) with npm
+You need [nodejs](https://nodejs.org/en/) with npm (LTS version recommended)
 
 ### - First of all
 
@@ -12,8 +12,8 @@ You need [nodejs](https://nodejs.org/en/) with npm
 
 
 - get service accounts key
-  - go to firebase project
-  - move to "Project Settings -> Service Accounts"
+  - go to firebase project console
+  - go to "Project Settings -> Service Accounts"
   - generate key, rename and place to root of project
 
 
@@ -25,11 +25,11 @@ You need [nodejs](https://nodejs.org/en/) with npm
 # install dependencies
 $ npm install
 
-# craft svg icons (run once before npm run dev)
-$ npm run icons
-
 # serve with hot reload at localhost:8080
 $ npm run dev
+
+# craft svg icons (run once before npm run dev)
+$ npm run icons
 
 # build for production and launch server
 $ npm run build
